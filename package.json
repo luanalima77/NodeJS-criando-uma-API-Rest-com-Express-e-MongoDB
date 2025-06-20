@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-criando-uma-api-rest-com-express-e-mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luanalima77/NodeJS-criando-uma-API-Rest-com-Express-e-MongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luanalima77/NodeJS-criando-uma-API-Rest-com-Express-e-MongoDB/issues"
+  },
+  "homepage": "https://github.com/luanalima77/NodeJS-criando-uma-API-Rest-com-Express-e-MongoDB#readme",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
