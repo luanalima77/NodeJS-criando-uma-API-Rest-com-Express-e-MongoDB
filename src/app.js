@@ -1,5 +1,9 @@
 //Importando o express.
 import express from 'express';
+import conectarNoBancoDeDados from "./config/dbConnect.js";
+
+// Variável de conexão.
+const conexao = await conectarNoBancoDeDados();
 
 //Criando uma instância de express.
 const app = express();
@@ -26,6 +30,17 @@ function buscarLivros(id){
         return livro.id === Number(id);
     });
 }
+
+// Averiguando erros.
+conexao.on("error", (erro) =>{
+    console.error("Erro na conexão com o banco de dados", erro);
+});
+
+// Criando a conexão.
+conexao.once("open", ()=>{
+    console.log("Conexão com o banco de dados feita com sucesso");
+});
+
 
 
 // ***CRIANDO ROTAS ***
