@@ -8,7 +8,7 @@ class LivroController{
         const listaLivros = await livro.find({});
         res.status(200).json(listaLivros);
         }catch(erro){
-            res.status(404).json(erro);
+            res.status(500).json(erro);
         }
     }
 
@@ -37,7 +37,7 @@ class LivroController{
         try{
             const id = req.params.id;
             await livro.findByIdAndUpdate(id, req.body);
-            res.status(200).json({message: "Livro atualizado com sucesso", livro: livroEncontrado});
+            res.status(200).json({message: "Livro atualizado com sucesso", livro: id});
         }catch(erro){
             res.status(500).json({message: `Erro ao atualizar livro por id: ${erro.message}`});
         }
@@ -47,7 +47,7 @@ class LivroController{
         try{
             const id = req.params.id;
             await livro.findByIdAndDelete(id);
-            res.status(200).json({message: "Livro deletado com sucesso", livro: livroEncontrado});
+            res.status(200).json({message: "Livro deletado com sucesso", livro: id});
         }catch(erro){
             res.status(500).json({message: `Erro ao deletar livro por id: ${erro.message}`});
         }
