@@ -5,11 +5,14 @@ const livroRoutes = express.Router();
 //Rota para obter os livros cadastrados.
 livroRoutes.get("/livros", LivroController.listarLivros);
 
-//Rota para cadastrar os livros.
-livroRoutes.post("/livros", LivroController.cadastrarLivro);
+//Rota para obter livros por editora.
+livroRoutes.get("/livros/busca", LivroController.listarLivrosPorEditora);
 
 //Rota para listar livro por id.
 livroRoutes.get("/livros/:id", LivroController.listarLivroPorId);
+
+//Rota para cadastrar os livros.
+livroRoutes.post("/livros", LivroController.cadastrarLivro);
 
 //Rota para atualizar livro por id.
 livroRoutes.put("/livros/:id", LivroController.atualizarLivroPorId);

@@ -1,5 +1,5 @@
 //Importando o model Autor.
-import autor from "../models/Autor.js";
+import {autor, autorSchema} from "../models/Autor.js";
 
 //Classe com os métodos para cada operação realizada com os autores.
 class AutorController{
