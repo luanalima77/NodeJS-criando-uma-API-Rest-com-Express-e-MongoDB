@@ -1,6 +1,7 @@
 //Importando o express.
 import express from 'express';
 import conectarNoBancoDeDados from "./config/dbConnect.js";
+import Livro from "./models/Livro.js";
 
 // Variável de conexão.
 const conexao = await conectarNoBancoDeDados();
