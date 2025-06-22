@@ -29,13 +29,13 @@ NodeJS-criando-uma-API-Rest-com-Express-e-MongoDB/
 │   │   ├── livroRoutes.js    # Rotas específicas para livros
 │   │   └── index.js          # Centralizador de rotas
 │   ├── app.js                # Configuração principal do Express
-│   └── server.js             # Ponto de entrada do servidor
 ├── .env.example              # Template de variáveis de ambiente
 ├── package.json              # Gerenciamento de dependências do projeto
 ├── .gitattributes            # Configurações do Git
 ├── .gitignore                # Arquivos ignorados pelo Git
 ├── package-lock.json         # Lock das versões
 └── README.md                 # Documentação
+└── server.js             # Ponto de entrada do servidor
 ```
 
 ---
